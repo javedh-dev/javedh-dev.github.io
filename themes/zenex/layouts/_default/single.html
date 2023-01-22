@@ -1,21 +1,20 @@
 {{ define "main" }}
-
-<div class="mt-36">
-
+<div class="mt-24">
     <div class="flex flex-col gap-2">
-    <h2 class="">{{ .Title }}</h2>
-    <div class="flex flex-row text-slate-500 text-sm">
-        <p>{{ .Date | time.Format ":date_long" }} {{ .Date | time.Format ":time_short" }} • 
-            {{ .ReadingTime }} Min Read • {{ .Params.author }}
-        </p>
+        {{ partial "breadcrumb.html" . }}
+        <h2 class="">{{ .Title }}</h2>
+        <div class="flex flex-row text-slate-500 text-sm">
+            <p>{{ .Date | time.Format ":date_long" }} {{ .Date | time.Format ":time_short" }} •
+                {{ .ReadingTime }} Min Read • {{ .Params.author }}
+            </p>
+        </div>
+        {{ if .Params.image }}
+        <div class="h-96 w-full rounded-md bg-cover bg-center mb-4"
+            style="background-image: url('{{ .Params.image }}');"></div>
+        {{/* <img src="{{ .Params.image }}" alt="Hero Image" class="max-h-48 w-full rounded-t"> */}}
+        {{ end }}
+        <p>{{ .Content }}</p>
     </div>
-    {{ if .Params.image }}
-    <div class="h-96 w-full rounded-md bg-cover bg-center mb-4"
-        style="background-image: url('{{ .Params.image }}');"></div>
-    {{/* <img src="{{ .Params.image }}" alt="Hero Image" class="max-h-48 w-full rounded-t"> */}}
-    {{ end }}
-    <p>{{ .Content }}</p>
-</div>
 </div>
 
 {{ end }}

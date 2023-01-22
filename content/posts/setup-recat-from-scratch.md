@@ -1,9 +1,8 @@
 ---
-title: "Post4"
-date: 2023-01-21T15:45:33+05:30
-draft: true
-image: https://picsum.photos/1920/1080
-author: Javed Hussain
+title: "Setup React project from scratch"
+date: 2022-05-16T07:45:00+05:30
+draft: false
+image: http://placeimg.com/640/360/tech
 ---
 
 Whenever it comes to working setting up a react project the first option that comes to our mind is `create-react-app`. I usually wondered what are some of the files that are created with it and how it creates the build etc. So, decided to give it a try to setup the full project from scratch. I will guide you through the tutorial how to do it and explain what each component does. Usually it is not recommended to people just starting with `JavaScript` and `NodeJS` world. I'll put some resources link if you want to explore that further.

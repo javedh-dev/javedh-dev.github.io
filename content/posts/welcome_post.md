@@ -1,11 +1,12 @@
 ---
-title: "Greetings Stranger ❤️"
-date: 2023-01-20T08:16:57+05:30
+title: "Greetings Stranger 👋"
+date: 2022-02-28T09:33:40+05:30
 draft: false
+weight: 1
 ---
 
 <br></br>
-I am **Javed Hussain**, a human who is a Software engineer by profession (and most importantly I :heart: that). I am quite curious about how things work be it any field.
+I am **Javed Hussain**, a human who is a Software engineer by profession (and most importantly I ❤️ that). I am quite curious about how things work be it any field.
 
 Thanks for stopping by. It is my personal space where I share my thoughts and experiences occasionally. Whatever is published here are totally my own thoughts and opinions. I am whole-heartily open to any correction or discussion.
 

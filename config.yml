@@ -14,38 +14,44 @@ menu:
   - identifier: blog
     name: Blog
     pre: feather
-    url: /posts
+    url: /posts/
     weight: -100
 
   social:
+  - identifier: github
+    name: Github
+    pre: fa-brands fa-github
+    url: https://github.com/javedh-dev
+    weight: 1
+
   - identifier: linkedin
     name: linkedin
     pre: fa-brands fa-linkedin
-    url: #
-    weight: 1
+    url: https://www.linkedin.com/in/javedh-dev
+    weight: 2
 
   - identifier: instagram
     name: instagram
     pre: fa-brands fa-instagram
-    url: #
-    weight: 2
+    url: https://www.instagram.com/javedh.dev
+    weight: 3
 
   - identifier: twitter
     name: Twitter
     pre: fa-brands fa-square-twitter
-    url: #
-    weight: 3
-
-  - identifier: resume
-    name: Resume
-    pre: fa-solid fa-file-pdf
-    url: #
+    url: https://twitter.com/javedh_dev
     weight: 4
+
+  - identifier: youtube
+    name: Youtube
+    pre: fa-brands fa-youtube
+    url: https://www.youtube.com/channel/UC9ZHPvoBkR5RjrZQqSFtCrQ
+    weight: 5
 
 params:
   name: Javed Hussain
   summary: |-
-    Senior Software engineer with more than 5 years of experience <br/>
+    Senior software engineer with more than 5 years of experience <br/>
     in building scalable and robust software solutions using, <br/>
     but not limited to `Java`, `React`, `Spring Boot` etc. <br/>
     Currently working with Target Corporation in Supply chain domain. <br/>

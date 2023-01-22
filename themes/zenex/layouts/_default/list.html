@@ -1,0 +1,26 @@
+{{ define "main" }}
+<div class="flex flex-col w-full  mt-36">
+    <div class="max-w-3xl self-center">
+        <h3 class="text-4xl mb-8 font-extrabold underline underline-offset-8">All Posts</h3>
+        <div class="flex flex-col gap-4">
+            {{ range .Site.RegularPages }}
+            <a href="{{.Permalink | relURL }}">
+                <div class="rounded-md p-4 dark:bg-slate-800 bg-slate-200 w-full">
+                    {{ if .Params.image }}
+                    <div class="h-48 w-full rounded-t bg-cover bg-center mb-4"
+                        style="background-image: url('{{ .Params.image }}');"></div>
+                    {{ end }}
+                    <h5 class="text-xl mb-5">{{ .Title }}</h5>
+                    <p>{{ .Content | safeHTML | truncate 300 }}</p>
+                    <div class="flex flex-row mt-8 text-slate-500 text-sm">
+                        <p>{{ .Date | time.Format ":date_long" }} {{ .Date | time.Format ":time_short" }} • {{
+                            .ReadingTime }} Min Read</p>
+                    </div>
+                </div>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+
+</div>
+{{ end }}

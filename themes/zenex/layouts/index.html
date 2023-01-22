@@ -1,12 +1,12 @@
 {{ define "main" }}
-<div class="rightpart w-full min-h-screen dark:bg-slate-900 bg-slate-100">
+<div class="rightpart max-w-fit min-h-screen">
     <div class="flex flex-col lg:flex-row gap-20 items-center">
-        <div class="profile-img flex-grow"></div>
+        <div class="profile-img bg-[url({{ .Site.Params.avatar }})]"></div>
         <div class="flex-grow">
             <h2 class="text-center lg:text-left text-2xl lg:text-4xl font-bold uppercase">
                 {{ .Site.Params.name }}
             </h2>
-            <p class="mt-4 text-center lg:text-left">
+            <p class="mt-4 text-center lg:text-left max-w-md">
                 {{ .Site.Params.summary | markdownify }}
             </p>
             <div class="flex flex-row gap-8 mt-10 fa-2x lg:justify-start justify-center">
@@ -20,13 +20,7 @@
                         {{ end }}
                     </a>
                 </div>
-                    
                 {{ end }}
-
-                {{/*  <div class="cursor-pointer k-hover"><i class="fa-brands fa-linkedin"></i></div>
-                <div class="cursor-pointer k-hover"><i class="fa-brands fa-instagram"></i></div>
-                <div class="cursor-pointer k-hover"><i class="fa-brands fa-square-twitter"></i></div>
-                <div class="cursor-pointer k-hover"><i class="fa-solid fa-file-pdf"></i></div>  */}}
             </div>
         </div>
     </div>

@@ -1,76 +1,163 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-    scrollbar-width: 0px;
-    scrollbar-color: var(--primary) var(--secondary);
-    -webkit-tap-highlight-color: transparent;
+  scrollbar-width: 0px;
+  scrollbar-color: var(--primary) var(--secondary);
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-    width: 0px;
+  width: 0px;
 }
 
 *::-webkit-scrollbar-track {
-    background: var(--primary);
+  background: var(--primary);
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: var(--secondary);
-    /*   background: repeating-linear-gradient(
+  background-color: var(--secondary);
+  /*   background: repeating-linear-gradient(
       45deg,
       var(--secondary),
       var(--secondary) 5px,
       var(--primary) 5px,
       var(--primary) 10px
     ); */
-    border-radius: 20px;
-    border: 3px solid var(--primary);
+  border-radius: 20px;
+  border: 3px solid var(--primary);
 }
 
 body {
-    overscroll-behavior: none;
-    font-family: 'Montserrat', sans-serif !important;
+  overscroll-behavior: none;
+  font-family: "Josefin Sans", sans-serif !important;
 }
-
 
 .leftpart {
-    @apply transition-all;
-    @apply flex-row items-center px-16 md:sticky fixed w-fit h-screen md:w-1/4;
-    @apply dark:bg-slate-800 bg-slate-50 md:opacity-100 opacity-0 md:translate-x-0 -translate-x-full;
+  @apply transition-all;
+  @apply flex-row items-center p-16 md:sticky top-0 fixed h-screen md:w-1/4;
+  @apply dark:bg-slate-800 bg-slate-200 md:opacity-100 opacity-0 md:translate-x-0 -translate-x-full;
 }
 
-.show{
-   @apply translate-x-0 opacity-100;
+.show {
+  @apply translate-x-0 opacity-100;
 }
 
 .rightpart {
-    @apply transition-all;
-    @apply flex flex-row items-center px-8 lg:pl-60;
+  @apply transition-all;
+  @apply flex flex-row items-center px-8 lg:pl-32;
 }
 
 .profile-img {
-    @apply bg-cover bg-no-repeat bg-center;
-    @apply min-h-[150px] min-w-[150px] lg:min-h-[250px] lg:min-w-[250px] ;
-    @apply shadow-[inset_0px_0px_0px_4px_rgba(0,0,0,0.2)] lg:shadow-[inset_0px_0px_0px_8px_rgba(0,0,0,0.2)]; 
-    @apply bg-[url("../images/me_javed.jpg")];
-    @apply animate-bw;
-    /* background-image: url("../assets/me_javed.jpg");
+  @apply bg-cover bg-no-repeat bg-center;
+  @apply min-h-[150px] min-w-[150px] lg:min-h-[250px] lg:min-w-[250px];
+  @apply shadow-[inset_0px_0px_0px_4px_rgba(0,0,0,0.2)] lg:shadow-[inset_0px_0px_0px_8px_rgba(0,0,0,0.2)];
+  @apply bg-[url("../images/me_javed.jpg")];
+  @apply animate-bw;
+  /* background-image: url("../assets/me_javed.jpg");
     -webkit-box-shadow: inset 0px 0px 0px 8px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: inset 0px 0px 0px 8px rgba(0, 0, 0, 0.2);
     box-shadow: inset 0px 0px 0px 8px rgba(0, 0, 0, 0.2); */
-
 }
 
 .kursor,
 .kursorChild {
-    @apply z-50;
+  @apply z-50;
 }
 
-li.active{
-    @apply text-black dark:text-white;
+li.active {
+  @apply text-black dark:text-white;
+}
+
+pre {
+  @apply bg-transparent !important;
+}
+
+.hljs {
+  @apply rounded-lg !important;
+}
+
+.hljs {
+  @apply bg-slate-800 !important;
+}
+
+pre {
+  position: relative;
+  overflow: auto;
+}
+
+pre button {
+  @apply absolute top-2 right-2 text-sm py-1 px-2 invisible text-white rounded-lg bg-slate-600;
+}
+
+pre:hover button {
+  visibility: visible;
+}
+
+pre[class*="language-"] button:hover {
+  cursor: pointer;
+  background-color: #bcbabb;
+}
+
+.menu > ul,ol {
+  @apply list-none;
+}
+
+/* General Styling */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-extrabold;
+}
+
+h1 {
+  @apply text-4xl;
+}
+
+h2 {
+  @apply text-3xl;
+}
+
+h3 {
+  @apply text-2xl;
+}
+
+h4 {
+  @apply text-xl;
+}
+
+h5 {
+  @apply text-lg;
+}
+
+/* p {
+  @apply text-lg;
+} */
+
+code {
+  @apply text-red-300 font-["Inconsolata"];
+}
+
+ul {
+  @apply list-disc list-inside;
+}
+
+ol {
+  @apply list-decimal list-inside;
+}
+
+ol>li>ol {
+  @apply pl-4;
+}
+
+li>:first-child{
+  @apply pl-1 inline-block;
 }

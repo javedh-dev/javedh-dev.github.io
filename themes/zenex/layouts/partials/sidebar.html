@@ -6,33 +6,32 @@
         <i class="fa-solid fa-circle-chevron-down fa-2x -rotate-90 transition-all"></i>
     </button>
     <div class="leftpart flex" id="menu">
-        <div class="flex flex-col gap-24 ">
+        <div class="flex flex-col h-full gap-2">
             <h3 class="text-3xl font-bold tracking-widest">ZENEX</h3>
-            <ul class="flex flex-col gap-2 font-semibold text-gray-400">
-
-                {{ range .Site.Menus.main }}
-                <li class="k-hover cursor-pointer {{ if eq .Params.active true }}active{{end}}">
-                    <a class="nav-link" href="{{ .URL }}">
-                        {{ if .Pre }}
-                        {{ $icon := printf "<i class=\"fa-solid fa-%s mr-2\"></i> " .Pre | safeHTML }}
-                        {{ $icon }}
-                        {{ end }}
-                        {{ $text := print .Name | safeHTML }}
-                        {{ $text }}
-                    </a>
-                </li>
-                {{ end }}
-
-                {{/* <li class="text-black dark:text-white k-hover cursor-pointer"><i class="fa-solid fa-house"></i>
-                    &nbsp; Home</li>
-                <li class="k-hover cursor-pointer"><i class="fa-solid fa-feather"></i> &nbsp; Blog</li>
-                <li class="k-hover cursor-pointer"><i class="fa-solid fa-circle-info"></i> &nbsp; About</li>
-                <li class="k-hover cursor-pointer"><i class="fa-solid fa-envelope"></i> &nbsp; Subscribe</li>
-                <li class="k-hover cursor-pointer"><i class="fa-solid fa-address-card"></i> &nbsp; Contact Me</li> */}}
-            </ul>
+            {{$currentPage := . }}
+            <div class="flex flex-grow items-center menu">
+                <ul class="flex flex-col gap-5 font-semibold text-gray-400">
+                    {{ range .Site.Menus.main }}
+                    {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
+                    {{- $page_url:= ($currentPage.Permalink | absLangURL) }}
+                    <li class="k-hover cursor-pointer {{ if eq $menu_item_url $page_url }}active{{end}}">
+                        <a class="nav-link" href="{{ .URL }}">
+                            <h5>
+                                {{ if .Pre }}
+                                {{ $icon := printf "<i class=\"fa-solid fa-%s mr-2\"></i> " .Pre | safeHTML }}
+                                {{ $icon }}
+                                {{ end }}
+                                {{ $text := print .Name | safeHTML }}
+                                {{ $text }}
+                            </h5>
+                        </a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
             <div class="text-sm">
-                <h5>©2023 Zenex Tech</h5>
-                <h5>Created By Javed Hussain</h5>
+                <p>©2023 Zenex Tech</p>
+                <p>Created By Javed Hussain</p>
             </div>
         </div>
     </div>

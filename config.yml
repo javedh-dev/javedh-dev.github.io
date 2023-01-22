@@ -1,4 +1,4 @@
-baseURL: 'http://localhost:1313/'
+baseURL: 'http://192.168.218.38:1313/'
 languageCode: 'en-us'
 title: 'Javed Hussain'
 theme: 'zenex'
@@ -8,15 +8,13 @@ menu:
   - identifier: home
     name: Home
     pre: house
-    url: #
+    url: /
     weight: -110
-    params:
-      active: true
 
   - identifier: blog
     name: Blog
     pre: feather
-    url: #
+    url: /posts
     weight: -100
 
   social:
@@ -47,7 +45,13 @@ menu:
 params:
   name: Javed Hussain
   summary: |-
-    Senior Software engineer with more than 5 years of experience
-    in building scalable and robust software solutions using,
-    but not limited to <code>Java</code>
+    Senior Software engineer with more than 5 years of experience <br/>
+    in building scalable and robust software solutions using, <br/>
+    but not limited to `Java`, `React`, `Spring Boot` etc. <br/>
+    Currently working with Target Corporation in Supply chain domain. <br/>
   avatar: images/me_javed.jpg
+
+# markup:
+#   goldmark:
+#     renderer:
+#       unsafe: true

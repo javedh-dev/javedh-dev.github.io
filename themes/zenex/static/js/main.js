@@ -36,3 +36,25 @@ els.forEach(item => {
         console.log("Bhai me aa Gaya");
       })
 });
+
+hljs.highlightAll();
+
+let preBlocks = document.querySelectorAll("pre");
+
+preBlocks.forEach((preBlock) => {
+  // only add button if browser supports Clipboard API
+  if (navigator.clipboard) {
+    let button = document.createElement("button");
+
+    button.innerText = "Copy";
+    preBlock.appendChild(button);
+    const code = preBlock.getElementsByTagName("code")[0].textContent;
+    button.addEventListener("click", () => {
+        navigator.clipboard.writeText(code);
+        button.innerText = "Copied!!!"
+        setTimeout(()=>{
+            button.innerText = "Copy"
+        },2000)
+    });
+  }
+});

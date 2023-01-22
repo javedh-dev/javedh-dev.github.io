@@ -1,0 +1,3 @@
+[submodule "themes/zenex"]
+	path = themes/zenex
+	url = git@github.com:javedh-dev/zenex-hugo.git

@@ -9,13 +9,13 @@ menu:
     name: Home
     pre: house
     url: /
-    weight: -110
+    weight: 1
 
   - identifier: blog
     name: Blog
     pre: feather
     url: /posts/
-    weight: -100
+    weight: 2
 
   social:
   - identifier: github

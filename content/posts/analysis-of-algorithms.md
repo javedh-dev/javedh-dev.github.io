@@ -2,7 +2,7 @@
 title: "Analysis of Algorithms"
 date: 2022-04-03T11:10:08+05:30
 draft: false
-image: http://placeimg.com/640/360/animals
+image: https://picsum.photos/id/7/1080/800
 ---
 
 Analyzing algorithms is one of the most important tasks while developing and using an algorithm in an application.

@@ -7,15 +7,27 @@ menu:
   main:
   - identifier: home
     name: Home
-    pre: house
+    # pre: house
     url: /
     weight: 1
 
   - identifier: blog
     name: Blog
-    pre: feather
+    # pre: feather
     url: /posts/
     weight: 2
+  
+  - identifier: about
+    name: About
+    # pre: feather
+    url: /about/
+    weight: 3
+  
+  - identifier: contact
+    name: Contact
+    # pre: feather
+    url: /contact/
+    weight: 4
 
   social:
   - identifier: github
@@ -51,10 +63,9 @@ menu:
 params:
   name: Javed Hussain
   summary: |-
-    Senior software engineer with more than 5 years of experience <br/>
-    in building scalable and robust software solutions using, <br/>
-    but not limited to `Java`, `React`, `Spring Boot` etc. <br/>
-    Currently working with Target Corporation in Supply chain domain. <br/>
+    An experienced software developer delivering innovative solutions across
+    diverse sectors, adept in both large organizations and startups. Based out of India,
+    Looking forward to work around the globe
   avatar: images/me_javed.jpg
 
 # markup:
